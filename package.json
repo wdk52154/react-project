@@ -16,21 +16,21 @@
   "license": "ISC",
   "config": {
     "commitizen": {
-        "path": "node_modules/cz-git"
+      "path": "node_modules/cz-git"
     }
-  },
+  },  
   "devDependencies": {
-    "eslint": "9.10.0",
+    "@commitlint/config-conventional": "19.5.0",
     "@eslint/js": "9.10.0",
-    "typescript-eslint": "8.6.0",
+    "commitizen": "4.3.0",
+    "commitlint": "19.5.0",
+    "cz-git": "1.9.4",
+    "eslint": "9.10.0",
+    "husky": "9.1.6",
+    "postcss-less": "6.0.0",
     "stylelint": "16.9.0",
     "stylelint-config-standard": "36.0.1",
-    "postcss-less": "6.0.0",
     "stylelint-less": "3.0.1",
-    "husky": "9.1.6",
-    "commitizen": "4.3.0",
-    "cz-git": "1.9.4",
-    "commitlint": "19.5.0",
-    "@commitlint/config-conventional": "19.5.0"
+    "typescript-eslint": "8.6.0"
   }
 }
