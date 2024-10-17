@@ -11,14 +11,14 @@
     "prepare": "husky",
     "commit": "git-cz"
   },
-  "config": {
-        "commitizen": {
-            "path": "node_modules/cz-git"
-        }
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "config": {
+    "commitizen": {
+        "path": "node_modules/cz-git"
+    }
+  },
   "devDependencies": {
     "eslint": "9.10.0",
     "@eslint/js": "9.10.0",
