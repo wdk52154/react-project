@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import CallbackCase1 from './React-base/hooks/6_useCallback/CallbackCase1';
 
 const App: React.FC = () => {
   return (
     <>
-      <h1>This is App</h1>
+      <CallbackCase1 />
     </>
   );
 };
