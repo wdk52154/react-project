@@ -13,8 +13,7 @@ module.exports = {
       customScope: 'Denote the SCOPE of this change:',
       subject: 'Write a SHORT, IMPERATIVE tense description of the change:\n',
       body: 'Provide a LONGER description of the change (optional). Use "|" to break new line:\n',
-      breaking:
-        'List any BREAKING CHANGES (optional). Use "|" to break new line:\n',
+      breaking: 'List any BREAKING CHANGES (optional). Use "|" to break new line:\n',
       footerPrefixesSelect:
         'Select the ISSUES type of changeList by this change (optional):',
       customFooterPrefix: 'Input ISSUES prefix:',
@@ -93,9 +92,7 @@ module.exports = {
     breaklineNumber: 100,
     breaklineChar: '|',
     skipQuestions: [],
-    issuePrefixes: [
-      { value: 'closed', name: 'closed:   ISSUES has been processed' },
-    ],
+    issuePrefixes: [{ value: 'closed', name: 'closed:   ISSUES has been processed' }],
     customIssuePrefixAlign: 'top',
     emptyIssuePrefixAlias: 'skip',
     customIssuePrefixAlias: 'custom',
