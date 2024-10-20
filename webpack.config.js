@@ -5,6 +5,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
+
+//是否开发环境
+const devMode = process.env.NODE_ENV !== 'production';
+
 module.exports = {
   //开发环境
   mode: 'development',
@@ -36,11 +40,12 @@ module.exports = {
   //使用插件
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './public/index.html',
       filename: 'index.html',
       minify: true,
     }),
     new CleanWebpackPlugin(),
+
     new MiniCssExtractPlugin({
       //打包后CSS文件的名字
       filename: 'main.[hash:8].css',
@@ -82,8 +87,7 @@ module.exports = {
       {
         test: /\.(css|less)$/, // 基于正则匹配：哪些文件是我们需要处理的
         use: [
-          MiniCssExtractPlugin.loader, //抽离CSS代码的
-          //'style-loader', // 把css以内嵌式导入到页面
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader', //处理特殊语法
           'postcss-loader', //配合autoprefixer&browserlist给css3属性设置前缀【兼容】
           'less-loader', //把less编译为css
