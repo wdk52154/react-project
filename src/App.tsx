@@ -1,10 +1,10 @@
 import React from 'react';
-import FlexTest from './Flex/FlexTest';
+import Todolist from './components/Todo_list/Todolist';
 
 const App: React.FC = () => {
   return (
     <>
-      <FlexTest />
+      <Todolist />
     </>
   );
 };
