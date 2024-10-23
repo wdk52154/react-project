@@ -6,7 +6,7 @@ const Case2: React.FC = () => {
 
   useEffect(() => {
     setInterval(() => {
-      setCount((count) => count + 1);
+      // setCount((count) => count + 1);
       setCount((count) => {
         console.log('count', count);
         return count + 1;

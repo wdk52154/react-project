@@ -1,10 +1,10 @@
 import React from 'react';
-import Todolist from './components/Todo_list/Todolist';
+import MxdxThree from './learn/design-pattern/1 mxdx/mxdx3';
 
 const App: React.FC = () => {
   return (
     <>
-      <Todolist />
+      <MxdxThree />
     </>
   );
 };

@@ -34,6 +34,7 @@
         "src/components/Todo-list/Todos.jsx",
         "src/components/Todo-list/Todoinput.jsx",
         "src/components/Todo-list/Todo.jsx",
-        "src/components/Todo-list/index.jsx"
+        "src/components/Todo-list/index.jsx",
+        "src/learn/design-pattern/1 mxdx/1.jsx"
     ]
 }
