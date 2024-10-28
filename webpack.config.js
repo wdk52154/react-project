@@ -70,15 +70,15 @@ module.exports = {
            changeOrigin：修改请求头中的origin源信息
            ws：支持webscoket通信机制
         */
-    proxy: [
-      {
-        context: ['/zhi'],
-        target: 'https://news-at.zhihu.com/api/4',
-        pathRewrite: { '^/zhi': '' },
-        changeOrigin: true,
-        ws: true,
-      },
-    ],
+    // proxy: [
+    //   {
+    //     context: ['/zhi'],
+    //     target: 'https://news-at.zhihu.com/api/4',
+    //     pathRewrite: { '^/zhi': '' },
+    //     changeOrigin: true,
+    //     ws: true,
+    //   },
+    // ],
   },
   //模块加载规则
   module: {

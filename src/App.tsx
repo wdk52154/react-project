@@ -1,10 +1,10 @@
 import React from 'react';
-import Iteration from './learn/Array methods/Iteration/Iteration';
+import Login from './pages/Login/Login';
 
 const App: React.FC = () => {
   return (
     <>
-      <Iteration />
+      <Login />
     </>
   );
 };

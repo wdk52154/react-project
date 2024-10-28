@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      闭包:引用了另一个函数作用域中变量的函数.
+      两个作用：1 保存 2 保护
+      保存:函数执行,内部函数引入外部变量就会形成一个不销毁的作用域,一直存在内存里边,会造成内存泄漏
+      保护：函数执行，形成私有作用域.保护内部变量不受外界的干扰,适合模块化开发.
+      应用场景：
+      1 防抖
+      2 节流
+      */
+      const A = () => {
+        let a = '我是函数A作用域的内容';
+        const B = () => {
+          console.log(a);
+        };
+        B();
+      };
+      A();
+    </script>
+  </body>
+</html>

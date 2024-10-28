@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>防抖</title>
+  </head>
+  <body>
+    <h2>不使用防抖</h2>
+    搜索：
+    <input id="input1" />
+    <h2>使用防抖</h2>
+    搜索：
+    <input id="input2" />
+    <script>
+      /*
+        防抖:操作过程中,操作停止时才会执行。注重的是结果。
+        场景：1 输入框模糊匹配。在输入停止后才会调用接口.
+        */
+      const debounce = (fn, delay = 300) => {
+        //创建一个计时器变量,用于跟踪函数调用直接的时间间隔
+        let timer = 0;
+        //返回一个函数,实现防抖的逻辑
+        return function () {
+          //如果存在定时器,则清除计时器,以便重新计时.
+          if (timer) clearTimeout(timer);
+
+          //设置一个新的计时器,在延迟时间后执行指定的函数
+          timer = setTimeout(() => {
+            //在延迟时间后,通过apply方法调用传入的函数fn,并传递当前上下文和参数
+            fn.apply(this, arguments);
+            //将计时器重置为0，表示函数已经执行完毕
+            timer = 0;
+          }, delay);
+        };
+      };
+      const input1 = document.getElementById('input1');
+      input1.addEventListener('keyup', () => {
+        console.log('不使用防抖', input1.value);
+      });
+
+      const input2 = document.getElementById('input2');
+      input2.addEventListener(
+        'keyup',
+        debounce(() => {
+          console.log('使用防抖', input2.value);
+        }),
+      );
+    </script>
+  </body>
+</html>

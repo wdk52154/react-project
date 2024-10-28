@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>不使用节流</h2>
+    <div
+      id="div1"
+      draggable="true"
+      style="width: 100px; height: 100px; background: red"
+    ></div>
+    <h2>使用节流</h2>
+    <div
+      id="div2"
+      draggable="true"
+      style="width: 100px; height: 100px; background: red"
+    ></div>
+    <script>
+      /*
+        节流：操作过程中,按照一定的频率执行操作.注重的是过程.
+        应用场景：
+        1 滚动加载数据.滚动一段距离就会加载数据
+        */
+
+      //节流
+      const throttle = (fn, delay = 300) => {
+        let timer = 0;
+        return function () {
+          if (timer) return;
+          timer = setTimeout(() => {
+            fn.apply(this, arguments);
+            timer = 0;
+          }, delay);
+        };
+      };
+      const div1 = document.getElementById('div1');
+      div1.addEventListener('drag', (e) => {
+        console.log('不使用节流', e);
+      });
+
+      const div2 = document.getElementById('div2');
+      div2.addEventListener(
+        'drag',
+        throttle((e) => {
+          console.log('使用节流', e);
+        }),
+      );
+    </script>
+  </body>
+</html>
