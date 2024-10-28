@@ -6,13 +6,14 @@ import './login.less';
 const Login: React.FC = () => {
   return (
     <div className="login">
-      <div className="login-content">
-        <Form>
+      <div className="login_content">
+        <Form className="login_content-form">
           <Form.Item>
-            <Input placeholder="请输入用户名"></Input>
+            用户名:
+            <Input placeholder="请输入用户名" />
           </Form.Item>
           <Form.Item>
-            <Input placeholder="请输入密码"></Input>
+            密码: <Input placeholder="请输入密码" />
           </Form.Item>
         </Form>
       </div>
