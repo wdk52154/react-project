@@ -1,10 +1,10 @@
 import React from 'react';
-import CreateElement from './learn/React-base/createElement/createElement';
+import Home from './pages/Home';
 
 const App: React.FC = () => {
   return (
     <>
-      <CreateElement />
+      <Home />
     </>
   );
 };

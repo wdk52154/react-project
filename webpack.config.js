@@ -19,6 +19,10 @@ module.exports = {
     filename: '[name].[hash:8].js',
     path: path.resolve(__dirname, './dist'),
   },
+  //开启缓存优化
+  cache: {
+    type: 'filesystem', // 使用文件缓存
+  },
   //优化项
   optimization: {
     //设置压缩方式
@@ -31,7 +35,7 @@ module.exports = {
   },
   //路径模块解析规则
   resolve: {
-    extensions: ['.js', '.jsx', '.tsx'], // 添加其他需要的扩展
+    extensions: ['.js', '.ts', '.tsx'], // 添加其他需要的扩展
     //配置别名,@以后代表的就是src这个路径
     alias: {
       '@': path.resolve(__dirname, 'src'),
